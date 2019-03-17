@@ -4,16 +4,13 @@
 #
 Name     : R-rrcov
 Version  : 1.4.7
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/rrcov_1.4-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rrcov_1.4-7.tar.gz
 Summary  : Scalable Robust Estimators with High Breakdown Point
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-rrcov-lib = %{version}-%{release}
-Requires: R-mvtnorm
-Requires: R-pcaPP
-Requires: R-robustbase
 BuildRequires : R-mvtnorm
 BuildRequires : R-pcaPP
 BuildRequires : R-robustbase
@@ -38,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542293243
+export SOURCE_DATE_EPOCH=1552862784
 
 %install
-export SOURCE_DATE_EPOCH=1542293243
+export SOURCE_DATE_EPOCH=1552862784
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -77,8 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rrcov|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rrcov || :
 
 
 %files
@@ -132,7 +128,26 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rrcov/help/rrcov.rdx
 /usr/lib64/R/library/rrcov/html/00Index.html
 /usr/lib64/R/library/rrcov/html/R.css
-/usr/lib64/R/library/rrcov/libs/symbols.rds
+/usr/lib64/R/library/rrcov/tests/thubert.R
+/usr/lib64/R/library/rrcov/tests/thubert.Rout.save
+/usr/lib64/R/library/rrcov/tests/tlda.R
+/usr/lib64/R/library/rrcov/tests/tlda.Rout.save
+/usr/lib64/R/library/rrcov/tests/tldapp.R
+/usr/lib64/R/library/rrcov/tests/tldapp.Rout.save
+/usr/lib64/R/library/rrcov/tests/tmcd4.R
+/usr/lib64/R/library/rrcov/tests/tmcd4.Rout.save
+/usr/lib64/R/library/rrcov/tests/tmest4.R
+/usr/lib64/R/library/rrcov/tests/tmest4.Rout.save
+/usr/lib64/R/library/rrcov/tests/tmve4.R
+/usr/lib64/R/library/rrcov/tests/tmve4.Rout.save
+/usr/lib64/R/library/rrcov/tests/togk4.R
+/usr/lib64/R/library/rrcov/tests/togk4.Rout.save
+/usr/lib64/R/library/rrcov/tests/tqda.R
+/usr/lib64/R/library/rrcov/tests/tqda.Rout.save
+/usr/lib64/R/library/rrcov/tests/tsde.R
+/usr/lib64/R/library/rrcov/tests/tsde.Rout.save
+/usr/lib64/R/library/rrcov/tests/tsest.R
+/usr/lib64/R/library/rrcov/tests/tsest.Rout.save
 
 %files lib
 %defattr(-,root,root,-)
