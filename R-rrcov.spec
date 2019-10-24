@@ -4,7 +4,7 @@
 #
 Name     : R-rrcov
 Version  : 1.4.7
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/rrcov_1.4-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rrcov_1.4-7.tar.gz
 Summary  : Scalable Robust Estimators with High Breakdown Point
@@ -18,6 +18,7 @@ BuildRequires : R-mvtnorm
 BuildRequires : R-pcaPP
 BuildRequires : R-robustbase
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 Multivariate Analysis with High Breakdown Point.
@@ -38,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562205271
+export SOURCE_DATE_EPOCH=1571897223
 
 %install
-export SOURCE_DATE_EPOCH=1562205271
+export SOURCE_DATE_EPOCH=1571897223
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
