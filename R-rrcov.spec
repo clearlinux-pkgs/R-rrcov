@@ -4,7 +4,7 @@
 #
 Name     : R-rrcov
 Version  : 1.5.5
-Release  : 38
+Release  : 39
 URL      : https://cran.r-project.org/src/contrib/rrcov_1.5-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rrcov_1.5-5.tar.gz
 Summary  : Scalable Robust Estimators with High Breakdown Point
