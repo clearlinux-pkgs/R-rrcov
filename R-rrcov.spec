@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-rrcov
-Version  : 1.7.3
-Release  : 61
-URL      : https://cran.r-project.org/src/contrib/rrcov_1.7-3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/rrcov_1.7-3.tar.gz
+Version  : 1.7.4
+Release  : 62
+URL      : https://cran.r-project.org/src/contrib/rrcov_1.7-4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/rrcov_1.7-4.tar.gz
 Summary  : Scalable Robust Estimators with High Breakdown Point
 Group    : Development/Tools
 License  : GPL-3.0
@@ -46,10 +46,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684341547
+export SOURCE_DATE_EPOCH=1687800010
 
 %install
-export SOURCE_DATE_EPOCH=1684341547
+export SOURCE_DATE_EPOCH=1687800010
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
